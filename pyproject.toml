@@ -10,4 +10,4 @@ authors = [{ name = "Dootax" }]
 dependencies = []
 
 [project.scripts]
-doobots-runner = "doobots.local_runner:main"
+doobots-run = "doobots.local_runner:main"

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doobots"
+version = "0.1.0"
+description = "Helpers do DooBots para execução de código do usuário"
+authors = [{ name = "Dootax" }]
+dependencies = []
+
+[project.scripts]
+doobots-runner = "doobots.local_runner:main"

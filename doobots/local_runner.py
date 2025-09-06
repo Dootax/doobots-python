@@ -14,8 +14,11 @@ def run_user(q, data):
         if not hasattr(user_module, "main"):
             q.put({"__error__": "no_main", "detail": "main(input) not found"})
             return
+        
+        request_data = data.get("data", {})
+        input_files = data.get("files", [])
 
-        result = user_module.main(Request(data))
+        result = user_module.main(Request(request_data, input_files))
 
         if isinstance(result, Response):
             q.put({"__result__": result.to_dict()})

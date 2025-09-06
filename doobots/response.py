@@ -1,13 +1,14 @@
 import json
 import base64 as base64tools
 import os
+from doobots.file import File
 
 class Response:
     def __init__(self):
-        self._data = {}
-        self._files = []
+        self._data : dict = {}
+        self._files: list[File] = []
 
-    def put(self, key: str, value):
+    def put(self, key: str, value: any):
         self._data[key] = value
 
     def put_all(self, d: dict):
@@ -31,10 +32,10 @@ class Response:
         if not file_name or not base64:
             raise ValueError("Either file_name+base64 or file_path must be provided")
         
-        self._files.append({"fileName": file_name, "base64": base64})
+        self._files.append(File(base64, file_name))
 
-    def to_dict(self):
-        result = dict(self._data)
-        if self._files:
-            result["files"] = self._files
-        return result
+    def to_dict(self) -> dict:
+        return {
+            "data": self._data,
+            "files": self._files
+        }

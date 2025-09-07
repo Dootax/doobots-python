@@ -1,4 +1,5 @@
 from doobots.file import File
+from doobots.utils import ensure_type
 class Request:
     def __init__(self, data: dict, files: list[dict] = []):
         self._data = dict(data)
@@ -18,7 +19,8 @@ class Request:
         return self._files
 
     def get_file(self, file_name: str) -> File | None:
-        print(self._files)
+        ensure_type("file_name", file_name, str)
+        
         for f in self._files:
             if f.fileName == file_name:
                 return f

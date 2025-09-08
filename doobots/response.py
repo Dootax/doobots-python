@@ -43,7 +43,9 @@ class Response:
         self._files.append(File(base64, file_name))
 
     def to_dict(self) -> dict:
+        files_dicts = [file.__dict__ for file in self._files]
+
         return {
             "data": self._data,
-            "files": self._files
+            "files": files_dicts
         }

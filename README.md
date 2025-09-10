@@ -10,5 +10,3 @@ source .venv/bin/activate
 pip install -e .
 ./run-tests.sh
 ```
-
-> Projeto está em WIP. Quando liberarmos a versão 1.0, publicaremos no PyPI.

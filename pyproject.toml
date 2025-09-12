@@ -1,13 +1,13 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "doobots"
-version = "1.0.3"
+version = "1.0.5"
 description = "Helpers do DooBots para execução de código do usuário"
 authors = [{ name = "Dootax" }]
-dependencies = []
+dependencies = ["toml>=0.10.2"]
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }

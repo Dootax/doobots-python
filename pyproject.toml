@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "doobots"
-version = "1.0.2"
+version = "1.0.3"
 description = "Helpers do DooBots para execução de código do usuário"
 authors = [{ name = "Dootax" }]
 dependencies = []
@@ -23,6 +23,7 @@ classifiers = [
 
 [project.scripts]
 doobots-run = "doobots.local_runner:main"
+doobots-package = "doobots.packager:main"
 
 [project.urls]
 "Homepage" = "https://github.com/Dootax/doobots-python"

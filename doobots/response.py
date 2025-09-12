@@ -2,12 +2,12 @@ import json
 import base64 as base64tools
 import os
 from doobots.file import File
+from doobots.base_message import BaseMessage
 from doobots.utils import ensure_type
 
-class Response:
+class Response(BaseMessage):
     def __init__(self):
-        self._data : dict = {}
-        self._files: list[File] = []
+        super().__init__()
 
     def put(self, key: str, value: any):
         ensure_type("key", key, str)

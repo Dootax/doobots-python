@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "doobots"
-version = "1.0.0"
+version = "1.0.1"
 description = "Helpers do DooBots para execução de código do usuário"
 authors = [{ name = "Dootax" }]
 dependencies = []

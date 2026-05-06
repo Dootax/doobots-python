@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=82.0.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "doobots"
-version = "1.0.5"
+version = "1.0.6"
 description = "Helpers do DooBots para execução de código do usuário"
 authors = [{ name = "Dootax" }]
 dependencies = ["toml>=0.10.2"]
